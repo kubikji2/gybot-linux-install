@@ -1,0 +1,5 @@
+[submodule "ubuntu-essentials-install"]
+	path = ubuntu-essentials-install
+	url = https://github.com/kubikji2/ubuntu-essentials-install.git
+	branch = master
+
