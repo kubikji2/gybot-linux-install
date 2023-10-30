@@ -5,6 +5,8 @@ name=VEXcodeIQ-20231003.exe
 # remove if present
 rm -f $name
 
+sudo apt install curl
+
 # download
 #wget -v https://link.vex.com/vexcode-iqblocks-windows
 #curl -O https://link.vex.com/vexcode-iqblocks-windows
