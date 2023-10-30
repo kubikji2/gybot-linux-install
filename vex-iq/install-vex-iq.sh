@@ -1,24 +1,30 @@
 #!/bin/bash
 
-name=VEXcodeIQ-20231003.exe
+# INSTALL CHROME
+# name
+name="google-chrome-stable_current_amd64.deb"
 
 # remove if present
 rm -f $name
 
-sudo apt install curl
+# download
+wget https://dl.google.com/linux/direct/$name
+
+# install
+sudo dpkg -i ./$name
+
+
+# INSTALL ROBOT MESH CONNECT
+# name
+name="robotmeshconnect-0.6_amd64.deb"
+
+# remove if present
+rm -f $name
 
 # download
-#wget -v https://link.vex.com/vexcode-iqblocks-windows
-#curl -O https://link.vex.com/vexcode-iqblocks-windows
-#wget https://content.vexrobotics.com/vexcode/iqblocks/VEXcodeIQ-20231003.exe
-curl -O https://content.vexrobotics.com/vexcode/iqblocks/$name --verbose
+wget https://www.robotmesh.com/downloads/robotmeshconnect-0.6_amd64.deb
 
-# install through wine
-wine $name
-
-sudo apt-get remove winbind && sudo apt-get install winbind -y
-sudo apt install winetricks -y
-winetricks dxvk
-
+# install
+sudo dpkg install ./$name
 
 
