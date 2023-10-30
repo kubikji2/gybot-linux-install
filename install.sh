@@ -8,5 +8,11 @@ sudo usermod -a -G tty $USER
 sudo usermod -a -G dialout $USER
 
 # install udev rules
-./udev/install-udev.sh
+cd udev
+./install-udev.sh
+cd -
 
+# install vex iq
+cd vex-iq
+./install-vex-iq.sh
+cd -
