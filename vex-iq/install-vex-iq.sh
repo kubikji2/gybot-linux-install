@@ -25,6 +25,6 @@ rm -f $name
 wget https://www.robotmesh.com/downloads/robotmeshconnect-0.6_amd64.deb
 
 # install
-sudo dpkg install ./$name
+sudo dpkg -i ./$name
 
 
